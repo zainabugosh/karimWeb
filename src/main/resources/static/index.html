@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>my first web</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -11,5 +14,45 @@
 <h2>
     good  job
 </h2>
+<form id="personForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName">
+
+    <label for="secondName">Last Name:</label>
+    <input type="text" id="secondName" name="secondName">
+    <label for="email">email:</label>
+    <input type="text" id="email" name="email">
+    <label for="address">address:</label>
+    <input type="text" id="address" name="address">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="number" id="phoneNumber" name="phoneNumber">
+    <button type="button" onclick="savePerson()">Save</button>
+</form>
+
+<script>
+    function savePerson() {
+        let user = {
+            firstName: $("#firstName").val(),
+            secondName: $("#secondName").val(),
+            email:$("#email").val(),
+            address:$("#address").val(),
+            phoneNumber:$("#phoneNumber").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/users/addUser",
+            contentType: "application/json",
+            data: JSON.stringify(user),
+            success: function () {
+                alert("Person saved successfully!");
+            },
+            error: function (error) {
+                console.log("Error saving person: ", error);
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
