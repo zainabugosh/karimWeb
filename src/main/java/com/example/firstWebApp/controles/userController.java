@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @RestController
 public class userController {
@@ -21,5 +22,11 @@ public class userController {
     public @ResponseBody ArrayList<user> getAll()
     {
         return userServices.getAll();
+    }
+
+    @GetMapping("/user/findUserId/{id}")
+    public @ResponseBody Optional<user> findUserById(@PathVariable Long id)
+    {
+        return userServices.findUserById(id);
     }
 }
