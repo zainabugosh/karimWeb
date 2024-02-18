@@ -16,7 +16,7 @@
     }
     $.ajax({
     type: "GET",
-    url: "/users/getAll",
+    url: "localhost:2000/users/getAll",
     success: function (users) {
     // Iterate through the products and display them in the table
     const usersList = $("#usersList");
@@ -51,7 +51,7 @@
 
     $.ajax({
     type: "POST",
-    url: "/users/addUser",
+    url: "localhost:2000/users/addUser",
     contentType: "application/json",
     data: JSON.stringify(user),
     success: function () {
@@ -70,7 +70,7 @@
     function findUserById(id) {
     $.ajax({
         type: "Get",
-        url: "/user/findUserId/"+id,
+        url: "localhost:2000/user/findUserId/"+id,
         success: function (user) {
             alert("find user successfully id="+user.id);
             window.location.href = "/profile.html?id="+user.id;//+ encodeURIComponent(user.id);
