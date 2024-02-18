@@ -5,10 +5,8 @@
 
     function addRow(user) {
         $("#usersList").append("<tr><td>" + user.id + "</td>" +
-            "<td>" + user.firstName +
-            "</td><td>" + user.secondName + "</td>" +
-            "<td>"+user.email+"</td>" +"<td>"+user.address+"</td>"+
-            "<td>"+user.phoneNumber+"</td>"+
+            "<td>" + user.userName +
+            "<td>"+user.email+"</td>" +"<td>"+user.password+"</td>"+
             "<td>" +
             "<button onclick='findUserById(" + user.id + ")'>" + "Profile" + "</button>" +
             "</td>"+
@@ -16,18 +14,16 @@
     }
     $.ajax({
     type: "GET",
-    url: "localhost:2000/users/getAll",
+    url: "/users/getAll",
     success: function (users) {
     // Iterate through the products and display them in the table
     const usersList = $("#usersList");
     users.forEach(function (users) {
     usersList.append("<tr>" +
     "<td>" + users.id + "</td>"
-    +"<td>"+ users.firstName + "</td>"
-    +"<td>"+ users.secondName +"</td>"+
+    +"<td>"+ users.userName + "</td>"
     "<td>"+ users.email+"</td>"+
-    "<td>"+users.address+"</td>"
-    +"<td>"+ users.phoneNumber+ "</td>"+
+    "<td>"+users.password+"</td>"
     "<td>" +
     "<button onclick='findUserById(" + users.id + ")'>" + "Profile" + "</button>" +
     "</td>"
@@ -42,16 +38,14 @@
     $("#userForm").submit(function (event) {
     event.preventDefault();
     let user = {
-    firstName: $("#firstName").val(),
-    secondName: $("#secondName").val(),
+    userName: $("#userName").val(),
     email: $("#email").val(),
-    address: $("#address").val(),
-    phoneNumber: $("#phoneNumber").val()
+    password: $("#password").val(),
 };
 
     $.ajax({
     type: "POST",
-    url: "localhost:2000/users/addUser",
+    url: "/users/addUser",
     contentType: "application/json",
     data: JSON.stringify(user),
     success: function () {
@@ -70,7 +64,7 @@
     function findUserById(id) {
     $.ajax({
         type: "Get",
-        url: "localhost:2000/user/findUserId/"+id,
+        url: "/user/findUserId/"+id,
         success: function (user) {
             alert("find user successfully id="+user.id);
             window.location.href = "/profile.html?id="+user.id;//+ encodeURIComponent(user.id);
