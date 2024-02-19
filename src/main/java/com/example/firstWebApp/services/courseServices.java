@@ -15,4 +15,9 @@ public class courseServices {
     {
         return  courseRepository.save(c);
     }
+
+    public course findByName(String name)
+    {
+        return this.courseRepository.findCourseByName(name);
+    }
 }

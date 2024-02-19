@@ -21,9 +21,9 @@
     users.forEach(function (users) {
     usersList.append("<tr>" +
     "<td>" + users.id + "</td>"
-    +"<td>"+ users.userName + "</td>"
+    +"<td>"+ users.userName + "</td>"+
     "<td>"+ users.email+"</td>"+
-    "<td>"+users.password+"</td>"
+    "<td>"+users.password+"</td>"+
     "<td>" +
     "<button onclick='findUserById(" + users.id + ")'>" + "Profile" + "</button>" +
     "</td>"
@@ -76,6 +76,40 @@
     });
 
 }
+
+
+$(document).ready(function () {
+    // Login form submission
+    $("#loginForm").submit(function (event) {
+        event.preventDefault();
+
+        // Get user input
+        let email = $("#loginEmail").val();
+        let password = $("#loginPassword").val();
+
+        // Send login request to the server
+        $.ajax({
+            type: "POST",
+            url: "/users/login",
+            contentType: "application/json",
+            data: JSON.stringify({ email: email, password: password }),
+            success: function (response) {
+                // Redirect to profile page upon successful login
+                if (response.success) {
+                    alert("Login successful!");
+                    window.location.href = "/profile.html?id=" + response.userId;
+                } else {
+                    alert("Invalid email or password. Please try again.");
+                }
+            },
+            error: function (error) {
+                console.error("Error logging in: ", error);
+                alert("An error occurred while logging in. Please try again later.");
+            }
+        });
+    });
+});
+
     async function encryptNumber(number, key) {
         const encoder = new TextEncoder();
         const data = encoder.encode(number.toString());

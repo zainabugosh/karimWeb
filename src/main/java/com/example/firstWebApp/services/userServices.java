@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class userServices {
     @Autowired
-    userRepository repository;
+    private userRepository repository;
 
     public user addUser(user u)
     {
@@ -25,4 +25,15 @@ public class userServices {
     {
         return repository.findById(id);
     }
+
+  /*  public user updateUserInfo(user u,Long id)
+    {
+        Optional<user> u1 = repository.findById(id);
+        u1.get().setAddress(u.getAddress());
+        u1.get().setFirstName(u.getFirstName());
+        u1.get().setEmail(u.getEmail());
+        u1.get().setSecondName(u.getSecondName());
+        u1.get().setPhoneNumber(u.getPhoneNumber());
+        return repository.save(u1);
+    }*/
 }
