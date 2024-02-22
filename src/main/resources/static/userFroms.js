@@ -97,7 +97,7 @@ $(document).ready(function () {
                 // Redirect to profile page upon successful login
                 if (response.success) {
                     alert("Login successful!");
-                    window.location.href = "/profile.html?id=" + response.userId;
+                    window.location.href = "profile.html";
                 } else {
                     alert("Invalid email or password. Please try again.");
                 }
