@@ -77,3 +77,4 @@ async function encryptNumber(number, key) {
 async function decryptNumber(encryptedHex, key) {
     // Code for decryption...
 }
+})
