@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Function to add a new row to the users table
-    function addRow(user) {
+ /*   function addRow(user) {
         $("#usersList").append("<tr><td>" + user.id + "</td>" +
             "<td>" + user.userName + "</td>" +
             "<td>" + user.email + "</td>" +
@@ -26,9 +26,9 @@ $(document).ready(function () {
             console.error("Error fetching user data: ", error);
         }
     });
-
+*/
     // Form submission for user sign-up
-    $("#userForm").submit(function (event) {
+    $("#signupForm").submit(function (event) {
         event.preventDefault();
         let user = {
             userName: $("#userName").val(),
@@ -44,14 +44,14 @@ $(document).ready(function () {
             data: JSON.stringify(user),
             success: function () {
                 alert("User saved successfully!");
-                addRow(user); // Add the new user to the table
+               // addRow(user); // Add the new user to the table
             },
             error: function (error) {
                 console.error("Error saving user: ", error);
             }
         });
     });
-
+/*
     // Function to find a user by ID
     function findUserById(id) {
         $.ajax({
@@ -67,14 +67,6 @@ $(document).ready(function () {
         });
     };
 
+*/
 
-// Asynchronous function to encrypt a number
-async function encryptNumber(number, key) {
-    // Code for encryption...
-}
-
-// Asynchronous function to decrypt an encrypted number
-async function decryptNumber(encryptedHex, key) {
-    // Code for decryption...
-}
 })
