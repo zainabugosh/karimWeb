@@ -1,7 +1,7 @@
 package com.example.firstWebApp.services;
 
 import com.example.firstWebApp.entities.user;
-import com.example.firstWebApp.repository.userRepository;
+import com.example.firstWebApp.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,20 @@ public class userServices {
     public Optional<user> findUserById(Long id)
     {
         return repository.findById(id);
+    }
+    public user login(String  email , String password)
+    {
+        ArrayList<user> listOfUser = getAll();
+        for(int  i = 0 ; i<listOfUser.size();i++)
+        {
+            if (email.equals(listOfUser.get(i).getEmail())){
+                if (password.equals(listOfUser.get(i).getPassword())){
+                    return listOfUser.get(i);
+                }
+            }
+        }
+        return  null;
+
     }
 
   /*  public user updateUserInfo(user u,Long id)

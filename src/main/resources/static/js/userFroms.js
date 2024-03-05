@@ -51,6 +51,20 @@ $(document).ready(function () {
             }
         });
     });
+
+    $("#loginForm").submit(function (event){
+    event.preventDefault();
+    $.Ajax({
+    type="Get",
+    url=""
+    })
+    window.location.href="/profile.html";
+    });
+
+
+
+
+
 /*
     // Function to find a user by ID
     function findUserById(id) {

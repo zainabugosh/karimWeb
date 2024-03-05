@@ -2,6 +2,7 @@ package com.example.firstWebApp.controles;
 import com.example.firstWebApp.services.userServices;
 import com.example.firstWebApp.entities.user;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -28,5 +29,20 @@ public class userController {
     public @ResponseBody Optional<user> findUserById(@PathVariable Long id)
     {
         return userServices.findUserById(id);
+    }
+
+    @GetMapping("/user/{email}/{password}")
+    public ResponseEntity<user> login(@PathVariable String email, @PathVariable String password) {
+        // Call the login method from userServices
+        user user = userServices.login(email, password);
+
+        // Check if the user is not null
+        if (user != null) {
+            // Return OK response with the user object
+            return ResponseEntity.ok(user);
+        } else {
+            // Return bad request response
+            return ResponseEntity.badRequest().build();
+        }
     }
 }
