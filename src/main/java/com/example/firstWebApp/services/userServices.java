@@ -30,12 +30,12 @@ public class userServices {
         ArrayList<user> listOfUser = getAll();
         for(int  i = 0 ; i<listOfUser.size();i++)
         {
-            if (email.equals(listOfUser.get(i).getEmail())){
-                if (password.equals(listOfUser.get(i).getPassword())){
-                    return listOfUser.get(i);
+            user a =listOfUser.get(i);
+            if (email.equals(a.getEmail()) && password.equals(a.getPassword())){
+                    return a;
                 }
-            }
         }
+
         return  null;
 
     }

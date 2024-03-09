@@ -32,7 +32,7 @@ public class userController {
     }
 
     @GetMapping("/user/{email}/{password}")
-    public ResponseEntity<user> login(@PathVariable String email, @PathVariable String password) {
+    public ResponseEntity<user> login(@RequestParam String email, @RequestParam String password) {
         // Call the login method from userServices
         user user = userServices.login(email, password);
 
@@ -45,4 +45,5 @@ public class userController {
             return ResponseEntity.badRequest().build();
         }
     }
+
 }

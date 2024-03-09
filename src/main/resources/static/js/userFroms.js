@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Function to add a new row to the users table
- /*   function addRow(user) {
+    function addRow(user) {
         $("#usersList").append("<tr><td>" + user.id + "</td>" +
             "<td>" + user.userName + "</td>" +
             "<td>" + user.email + "</td>" +
@@ -26,11 +26,11 @@ $(document).ready(function () {
             console.error("Error fetching user data: ", error);
         }
     });
-*/
+
     // Form submission for user sign-up
     $("#signupForm").submit(function (event) {
         event.preventDefault();
-        let user = {
+        const user = {
             userName: $("#userName").val(),
             email: $("#email").val(),
             password: $("#password").val(),
@@ -44,28 +44,17 @@ $(document).ready(function () {
             data: JSON.stringify(user),
             success: function () {
                 alert("User saved successfully!");
-               // addRow(user); // Add the new user to the table
+                // Uncomment below if you want to add the new user to the table
+                // addRow(user);
             },
             error: function (error) {
                 console.error("Error saving user: ", error);
+                alert("Error saving user. Please try again.");
             }
         });
     });
 
-    $("#loginForm").submit(function (event){
-    event.preventDefault();
-    $.Ajax({
-    type="Get",
-    url=""
-    })
-    window.location.href="/profile.html";
-    });
 
-
-
-
-
-/*
     // Function to find a user by ID
     function findUserById(id) {
         $.ajax({
@@ -77,10 +66,8 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.error("Error finding user: ", error);
+                alert("Error finding user. Please try again.");
             }
         });
-    };
-
-*/
-
-})
+    }
+});

@@ -28,11 +28,40 @@
         <form id="loginForm">
             <label for="chk" aria-hidden="true">Login</label>
             <input type="email" id="loginEmail" name="email" placeholder="Email" required>
-            <input type="password" id="loginPassword" name="pswd" placeholder="Password" required>
+            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
     </div>
 </div>
+<script>
+    // Form submission for user login
+    $("#loginForm").submit(function (event) {
+        event.preventDefault();
+
+        var email = $("#loginEmail").val();
+        var password = $("#loginPassword").val();
+
+        console.log(email + " " + password);
+
+        $.ajax({
+            type: "GET",
+            url: "/user/"+email+"/"+password,
+            data: {
+                email: email,
+                password: password
+            },
+            success: function (data) {
+                alert("Login successful!");
+                window.location.href = "/profile.html";
+            },
+            error: function (error) {
+                console.error("Error logging in: ", error);
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    });
+</script>
+
 
 </body>
 </html>
