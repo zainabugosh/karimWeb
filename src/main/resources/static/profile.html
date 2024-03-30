@@ -1,141 +1,270 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Snippet - BBBootstrap</title>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='#' rel='stylesheet'>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <style>::-webkit-scrollbar {
-                                  width: 8px;
-                                }
-                                /* Track */
-                                ::-webkit-scrollbar-track {
-                                  background: #f1f1f1;
-                                }
 
-                                /* Handle */
-                                ::-webkit-scrollbar-thumb {
-                                  background: #888;
-                                }
+  <head>
 
-                                /* Handle on hover */
-                                ::-webkit-scrollbar-thumb:hover {
-                                  background: #555;
-                                } body {
-    background: rgb(99, 39, 120)
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: #BA68C8
-}
+    <title>Cyborg - Awesome HTML5 Template</title>
 
-.profile-button {
-    background: rgb(99, 39, 120);
-    box-shadow: none;
-    border: none
-}
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-.profile-button:hover {
-    background: #682773
-}
 
-.profile-button:focus {
-    background: #682773;
-    box-shadow: none
-}
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
 
-.profile-button:active {
-    background: #682773;
-    box-shadow: none
-}
+TemplateMo 579 Cyborg Gaming
 
-.back:hover {
-    color: #682773;
-    cursor: pointer
-}
+https://templatemo.com/tm-579-cyborg-gaming
 
-.labels {
-    font-size: 11px
-}
+-->
 
-.add-experience:hover {
-    background: #BA68C8;
-    color: #fff;
-    cursor: pointer;
-    border: solid 1px #BA68C8
-}</style>
-</head>
-<body className='snippet-body'>
-<div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
-        </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-                </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="streams.html">Streams</a></li>
+                        <li><a href="profile.html" class="active">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
-<script type='text/javascript' src='#'></script>
-<script type='text/javascript' src='#'></script>
-<script type='text/javascript' src='#'></script>
-<script type='text/javascript'>#</script>
-<script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
-                                myLink.addEventListener('click', function(e) {
-                                  e.preventDefault();
-                                });</script>
-<script>
-                                    // Function to get the value of a query parameter from the URL
-                                    function getQueryParam(name) {
-                                        const urlParams = new URLSearchParams(window.location.search);
-                                        return urlParams.get(name);
-                                    }
+  </header>
+  <!-- ***** Header Area End ***** -->
 
-                                    // Example usage
-                                    const userId = getQueryParam('id');
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
 
-                                    if (userId) {
-                                        console.log('User ID:', userId);
-                                        alert("finding  the id ="+userId);
-                                    } else {
-                                        console.error('User ID not found in the URL.');
-                                    }
-                                </script>
-</body>
+          <!-- ***** Banner Start ***** -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="main-profile ">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/images/profile.jpg" alt="" style="border-radius: 23px;">
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <div class="main-info header-text">
+
+                      <h4  id="name"></h4>
+                      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                      <script>
+    $(document).ready(function() {
+        var userName = localStorage.getItem("User");
+        $('#name').text(userName); // or $('#name').html(userName);
+    });
+</script>
+                      <span>Offline</span>
+
+                      <p>You Haven't Gone Live yet. Go Live By Touching The Button Below.</p>
+                      <div class="main-border-button">
+                        <a href="https://www.twitch.tv/directory">Start Live Stream</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <ul>
+                      <li>Games Downloaded <span>3</span></li>
+                      <li>Friends Online <span>16</span></li>
+                      <li>Live Streams <span>None</span></li>
+                      <li>Clips <span>29</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="clips">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="heading-section">
+                            <h4><em>Your Most Popular</em> Clips</h4>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="assets/images/clip-01.jpg" alt="" style="border-radius: 23px;">
+                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="down-content">
+                              <h4>First Clip</h4>
+                              <span><i class="fa fa-eye"></i> 250</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="assets/images/clip-02.jpg" alt="" style="border-radius: 23px;">
+                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="down-content">
+                              <h4>Second Clip</h4>
+                              <span><i class="fa fa-eye"></i> 183</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="assets/images/clip-03.jpg" alt="" style="border-radius: 23px;">
+                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="down-content">
+                              <h4>Third Clip</h4>
+                              <span><i class="fa fa-eye"></i> 141</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="assets/images/clip-04.jpg" alt="" style="border-radius: 23px;">
+                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="down-content">
+                              <h4>Fourth Clip</h4>
+                              <span><i class="fa fa-eye"></i> 91</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="main-button">
+                            <a href="#">Load More Clips</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Banner End ***** -->
+
+          <!-- ***** Gaming Library Start ***** -->
+          <div class="gaming-library profile-library">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4><em>Your Gaming</em> Library</h4>
+              </div>
+              <div class="item">
+                <ul>
+                  <li><img src="assets/images/game-01.jpg" alt="" class="templatemo-item"></li>
+                  <li><h4>Dota 2</h4><span>Sandbox</span></li>
+                  <li><h4>Date Added</h4><span>24/08/2036</span></li>
+                  <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
+                  <li><h4>Currently</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul>
+                  <li><img src="assets/images/game-02.jpg" alt="" class="templatemo-item"></li>
+                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
+                  <li><h4>Date Added</h4><span>22/06/2036</span></li>
+                  <li><h4>Hours Played</h4><span>745 H 22 Mins</span></li>
+                  <li><h4>Currently</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                </ul>
+              </div>
+              <div class="item last-item">
+                <ul>
+                  <li><img src="assets/images/game-03.jpg" alt="" class="templatemo-item"></li>
+                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
+                  <li><h4>Date Added</h4><span>21/04/2022</span></li>
+                  <li><h4>Hours Played</h4><span>632 H 46 Mins</span></li>
+                  <li><h4>Currently</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Gaming Library End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+          
+          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  </body>
+
 </html>

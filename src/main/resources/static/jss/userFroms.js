@@ -43,20 +43,18 @@ $(document).ready(function () {
             contentType: "application/json",
             data: JSON.stringify(user),
             success: function () {
-                alert("User saved successfully!");
-                // Uncomment below if you want to add the new user to the table
-                // addRow(user);
+            alert("the user have been saved");
             },
             error: function (error) {
                 console.error("Error saving user: ", error);
                 alert("Error saving user. Please try again.");
-            }
+            }findUserById
         });
     });
 
 
     // Function to find a user by ID
-    function findUserById(id) {
+    function (id) {
         $.ajax({
             type: "GET",
             url: "/user/findUserId/" + id,

@@ -1,8 +1,8 @@
 package com.example.firstWebApp.controles;
-import com.example.firstWebApp.services.userServices;
+
 import com.example.firstWebApp.entities.user;
+import com.example.firstWebApp.services.userServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -32,10 +32,10 @@ public class userController {
     }
 
     @GetMapping("/user/{email}/{password}")
-    public ResponseEntity<user> login(@RequestParam String email, @RequestParam String password) {
+    public Optional<user> login(@RequestParam String email, @RequestParam String password) {
         // Call the login method from userServices
-        user user = userServices.login(email, password);
-
+        return Optional.of(Optional.ofNullable(userServices.login(email, password)).orElseThrow());
+        /*
         // Check if the user is not null
         if (user != null) {
             // Return OK response with the user object
@@ -43,7 +43,7 @@ public class userController {
         } else {
             // Return bad request response
             return ResponseEntity.badRequest().build();
-        }
+        }*/
     }
 
 }
