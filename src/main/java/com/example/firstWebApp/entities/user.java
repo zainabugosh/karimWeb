@@ -21,6 +21,7 @@ public class user implements Serializable {
     public Long getId() {
         return id;
     }
+    //check
 
     public void setId(Long id) {
         this.id = id;
@@ -30,7 +31,7 @@ public class user implements Serializable {
         return userName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -51,9 +52,9 @@ public class user implements Serializable {
         this.password = password;
     }
 
-    public user(Long id, String firstName, String email, String password) {
+    public user(Long id, String userName, String email, String password) {
         this.id = id;
-        this.userName = firstName;
+        this.userName = userName;
         this.email = email;
         this.password=password;
     }

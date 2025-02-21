@@ -48,13 +48,14 @@ $(document).ready(function () {
             error: function (error) {
                 console.error("Error saving user: ", error);
                 alert("Error saving user. Please try again.");
-            }findUserById
+            }
         });
     });
 
 
     // Function to find a user by ID
-    function (id) {
+
+    function findUserById(id) {
         $.ajax({
             type: "GET",
             url: "/user/findUserId/" + id,
