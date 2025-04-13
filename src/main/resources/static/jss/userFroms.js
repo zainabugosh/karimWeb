@@ -61,7 +61,7 @@ $(document).ready(function () {
             url: "/user/findUserId/" + id,
             success: function (user) {
                 alert("User found successfully. ID: " + user.id);
-                window.location.href = "/profile.html?id=" + user.id;
+                window.location.href = "/index.html?id=" + user.id;
             },
             error: function (error) {
                 console.error("Error finding user: ", error);
